@@ -1,0 +1,18 @@
+apply plugin: 'ear'
+
+dependencies {
+	deploy project(':service')
+	deploy project(path: ':web', configuration: 'archives')
+
+	earlib libraries.commons.lang
+}
+
+ear {
+	archiveName = 'jee-cdi-features.ear'
+
+	doFirst {
+		deploymentDescriptor {
+			webModule(project(":web").war.archiveName, rootProject.name)
+		}
+	}
+}

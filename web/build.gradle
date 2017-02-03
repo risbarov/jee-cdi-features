@@ -1,0 +1,10 @@
+apply plugin: 'war'
+
+dependencies {
+	compile libraries.commons.lang
+
+	compileOnly libraries.javax.servlet
+	compileOnly libraries.javax.enterprise.cdi_api
+
+	providedCompile project(':service')
+}

@@ -1,0 +1,22 @@
+ext {
+	versions = [
+		commons_lang : '3.5',
+
+		jboss_javaee : '1.0.0.Final',
+
+		cdi_api : '1.2',
+	]
+
+	libraries = [
+		commons: [
+			lang : "org.apache.commons:commons-lang3:${versions.commons_lang}",
+		],
+
+		javax: [
+			servlet : "org.jboss.spec.javax.servlet:jboss-servlet-api_3.1_spec:${versions.jboss_javaee}",
+			enterprise : [
+				cdi_api : "javax.enterprise:cdi-api:${versions.cdi_api}",
+			],
+		],
+	]
+}

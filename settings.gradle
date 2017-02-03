@@ -1,0 +1,5 @@
+rootProject.name = 'jee-cdi-features'
+
+include 'service'
+include 'web'
+include 'ear'

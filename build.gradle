@@ -1,0 +1,31 @@
+group 'org.jee.cdi'
+version '1.0-SNAPSHOT'
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+allprojects {
+	apply plugin: 'java'
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+subprojects {
+	buildscript {
+		repositories {
+			mavenCentral()
+		}
+	}
+
+	repositories {
+		mavenCentral()
+	}
+
+	defaultTasks 'assemble'
+}
+
+apply from: './libraries.gradle'
