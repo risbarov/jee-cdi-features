@@ -1,4 +1,4 @@
-package org.jee.cdi.service.producers;
+package org.jee.cdi.service.producers.methods;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +10,7 @@ import javax.enterprise.inject.Produces;
  * @author Ruslan Isbarov <risbarov@technoserv.com>
  */
 @SessionScoped
-public class RandomProducer implements Serializable {
+public class RandomMethodProducer implements Serializable {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;

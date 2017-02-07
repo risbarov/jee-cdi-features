@@ -1,4 +1,4 @@
-package org.jee.cdi.service.producers;
+package org.jee.cdi.service.producers.methods;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -18,6 +18,6 @@ import static java.lang.annotation.ElementType.TYPE;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ TYPE, METHOD, FIELD })
 @Qualifier
-public @interface RandomDouble {
+public @interface Random {
 
 }

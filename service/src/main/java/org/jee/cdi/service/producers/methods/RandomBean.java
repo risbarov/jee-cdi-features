@@ -1,4 +1,4 @@
-package org.jee.cdi.service.producers;
+package org.jee.cdi.service.producers.methods;
 
 import java.util.Date;
 

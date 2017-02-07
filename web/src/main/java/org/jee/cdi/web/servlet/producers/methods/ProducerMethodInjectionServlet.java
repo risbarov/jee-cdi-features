@@ -1,4 +1,4 @@
-package org.jee.cdi.web.servlet.producers;
+package org.jee.cdi.web.servlet.producers.methods;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.CharEncoding;
 
-import org.jee.cdi.service.producers.Random;
-import org.jee.cdi.service.producers.RandomBean;
-import org.jee.cdi.service.producers.RandomDouble;
+import org.jee.cdi.service.producers.methods.Random;
+import org.jee.cdi.service.producers.methods.RandomBean;
+import org.jee.cdi.service.producers.methods.RandomDouble;
 
 /**
  * @author Ruslan Isbarov <risbarov@technoserv.com>
  */
-@WebServlet(urlPatterns = "/producers")
+@WebServlet(urlPatterns = "/producers/methods")
 public class ProducerMethodInjectionServlet extends HttpServlet {
 
 	/** The Constant serialVersionUID. */
@@ -32,7 +32,7 @@ public class ProducerMethodInjectionServlet extends HttpServlet {
 
 	@Inject
 	@RandomDouble
-	private Instance<Double> randomDouble;
+	private Instance<Double> randomDoubleProducer;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -50,7 +50,7 @@ public class ProducerMethodInjectionServlet extends HttpServlet {
 				randomBean.getCreateDate().getTime()
 			)
 		);
-		writer.println("Injected value: " + randomDouble.get());
+		writer.println("Injected value: " + randomDoubleProducer.get());
 		writer.flush();
 		writer.close();
 	}

@@ -10,7 +10,10 @@
 	<a href="${pageContext.request.contextPath}/named">Named injection</a>
 	<br/>
 
-	<a href="${pageContext.request.contextPath}/producers">Producer method injection</a>
+	<a href="${pageContext.request.contextPath}/producers/methods">Producer method injection</a>
+	<br/>
+
+	<a href="${pageContext.request.contextPath}/producers/fields">Producer field injection</a>
 	<br/>
 
 	<a href="${pageContext.request.contextPath}/context">Context injection</a>
