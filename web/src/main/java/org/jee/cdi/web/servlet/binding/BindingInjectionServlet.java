@@ -3,6 +3,8 @@ package org.jee.cdi.web.servlet.binding;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.enterprise.inject.Any;
+import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,6 +35,10 @@ public class BindingInjectionServlet extends HttpServlet {
 	@Hash(HashType.SHA512)
 	private HashGenerator sha512Generator;
 
+	@Inject
+	@Any
+	private Instance<HashGenerator> hashGenerators;
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
@@ -44,6 +50,11 @@ public class BindingInjectionServlet extends HttpServlet {
 
 		writer.println("MD5: " + md5Generator.calculate(getClass().getName()));
 		writer.println("SHA512: " + sha512Generator.calculate(getClass().getName()));
+		writer.println();
+		writer.println("Available hash generators:");
+
+		hashGenerators.forEach(writer::println);
+
 		writer.flush();
 		writer.close();
 	}
