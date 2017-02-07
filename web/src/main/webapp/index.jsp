@@ -16,6 +16,9 @@
 	<a href="${pageContext.request.contextPath}/producers/fields">Producer field injection</a>
 	<br/>
 
+	<a href="${pageContext.request.contextPath}/binding">Annotation field value based binding injection</a>
+	<br/>
+
 	<a href="${pageContext.request.contextPath}/context">Context injection</a>
 	<br/>
 </body>

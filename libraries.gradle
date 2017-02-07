@@ -1,6 +1,7 @@
 ext {
 	versions = [
-		commons_lang : '3.5',
+		commons_lang  : '3.5',
+		commons_codec : '1.10',
 
 		jboss_javaee : '1.0.0.Final',
 
@@ -9,7 +10,8 @@ ext {
 
 	libraries = [
 		commons: [
-			lang : "org.apache.commons:commons-lang3:${versions.commons_lang}",
+			lang  : "org.apache.commons:commons-lang3:${versions.commons_lang}",
+			codec : "commons-codec:commons-codec:${versions.commons_codec}",
 		],
 
 		javax: [

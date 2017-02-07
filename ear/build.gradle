@@ -5,6 +5,7 @@ dependencies {
 	deploy project(path: ':web', configuration: 'archives')
 
 	earlib libraries.commons.lang
+	earlib libraries.commons.codec
 }
 
 ear {

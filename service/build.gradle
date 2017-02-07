@@ -1,6 +1,8 @@
 apply plugin: 'java'
 
 dependencies {
+	compile libraries.commons.codec
+
 	compileOnly libraries.javax.servlet
 	compileOnly libraries.javax.enterprise.cdi_api
 }
