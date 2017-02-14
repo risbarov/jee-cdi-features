@@ -21,5 +21,8 @@
 
 	<a href="${pageContext.request.contextPath}/context">Context injection</a>
 	<br/>
+
+	<a href="${pageContext.request.contextPath}/events">Events</a>
+	<br/>
 </body>
 </html>
